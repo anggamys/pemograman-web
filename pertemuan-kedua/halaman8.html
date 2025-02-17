@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head>
+  <body>
+    <h1>Form</h1>
+    <form action="" method="post">
+      <label for="nama">Nama</label>
+      <input type="text" id="nama" name="nama" /><br />
+
+      <label for="alamat">Alamat</label>
+      <textarea id="alamat" name="alamat"></textarea> <br />
+
+      <label for="tanggal-lahir">Tanggal Lahir</label>
+      <input type="date" id="tanggal-lahir" name="tanggal-lahir" />
+
+      <fieldset>
+        <legend>Jenis Kelamin</legend>
+        <label for="laki-laki">
+          <input type="radio" id="laki-laki" name="jenis-kelamin" value="Laki laki" />
+          Laki laki </label
+        ><br />
+        <label for="perempuan">
+          <input type="radio" id="perempuan" name="jenis-kelamin" value="Perempuan" />
+          Perempuan
+        </label>
+      </fieldset>
+
+      <label for="pilih-pendidikan">Pendidikan</label>
+      <select id="pilih-pendidikan" name="pendidikan">
+        <option value="SMA">SMA</option>
+        <option value="S1">S1</option>
+        <option value="S2">S2</option>
+        <option value="S3">S3</option>
+      </select>
+
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
