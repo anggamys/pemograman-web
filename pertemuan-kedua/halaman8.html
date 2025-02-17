@@ -6,36 +6,49 @@
     <title>Form</title>
   </head>
   <body>
-    <h1>Form</h1>
-    <form action="" method="post">
+    <h1>Form modul</h1>
+    <!-- Contoh modul -->
+    <form action="post">
+      Nama anda: <input type="text" name="nama" /><br />
+      Email anda: <input type="email" name="email" /><br />
+      Alamat: <textarea name="komentar" cols="30" rows="5" id=""></textarea>
+
+      <input type="submit" value="Kirim" />
+      <input type="reset" value="Reset" />
+    </form>
+
+    <!-- Buatan sendiri -->
+    <h1>Form buatan sendiri</h1>
+    <form action="#" method="post">
       <label for="nama">Nama</label>
-      <input type="text" id="nama" name="nama" /><br />
+      <input type="text" id="nama" name="nama" required /><br />
 
       <label for="alamat">Alamat</label>
-      <textarea id="alamat" name="alamat"></textarea> <br />
+      <textarea id="alamat" name="alamat" rows="4" cols="50" required></textarea> <br />
 
       <label for="tanggal-lahir">Tanggal Lahir</label>
-      <input type="date" id="tanggal-lahir" name="tanggal-lahir" />
+      <input type="date" id="tanggal-lahir" name="tanggal-lahir" required /><br />
 
       <fieldset>
         <legend>Jenis Kelamin</legend>
         <label for="laki-laki">
-          <input type="radio" id="laki-laki" name="jenis-kelamin" value="Laki laki" />
+          <input type="radio" id="laki-laki" name="jenis-kelamin" value="Laki laki" required />
           Laki laki </label
         ><br />
         <label for="perempuan">
-          <input type="radio" id="perempuan" name="jenis-kelamin" value="Perempuan" />
+          <input type="radio" id="perempuan" name="jenis-kelamin" value="Perempuan" required />
           Perempuan
         </label>
       </fieldset>
 
       <label for="pilih-pendidikan">Pendidikan</label>
-      <select id="pilih-pendidikan" name="pendidikan">
+      <select id="pilih-pendidikan" name="pendidikan" required>
+        <option value="" disabled selected>Pilih Pendidikan</option>
         <option value="SMA">SMA</option>
         <option value="S1">S1</option>
         <option value="S2">S2</option>
-        <option value="S3">S3</option>
-      </select>
+        <option value="S3">S3</option></select
+      ><br />
 
       <button type="submit">Submit</button>
     </form>
