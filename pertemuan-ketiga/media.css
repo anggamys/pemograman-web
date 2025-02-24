@@ -1,0 +1,21 @@
+@charset "utf-8";
+/* CSS Document */
+@media screen and (min-width: 480px) {
+  body {
+    background-color: #00f;
+  }
+  h1 {
+    font-size: 2px;
+  }
+  h1 {
+    border-style: dashed;
+  }
+}
+@media screen and (min-width: 300px) {
+  h1 {
+    border-style: solid;
+  }
+  body {
+    background-color: #ccc;
+  }
+}

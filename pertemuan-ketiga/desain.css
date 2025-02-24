@@ -1,0 +1,22 @@
+.header {
+  background: #6699cc;
+  padding: 20px;
+}
+
+.header a.judul {
+  font-size: 200%;
+  color: #fff;
+}
+
+.content {
+  background: #ddd;
+  min-height: 400px;
+  padding: 10px;
+}
+
+.footer {
+  background: #333;
+  padding: 10px;
+  color: #ccc;
+  margin-bottom: 0px;
+}

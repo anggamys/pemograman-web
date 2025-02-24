@@ -1,0 +1,65 @@
+#badan_utama {
+  height: auto;
+  width: 800px;
+  vertical-align: middle;
+  box-shadow: 0px 0px 5px #000;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+}
+
+#header {
+  background-color: #ff9900;
+  text-align: left;
+  padding-left: 10px;
+  height: 100px;
+  z-index: 3;
+  overflow: hidden;
+}
+
+#menu {
+  background-color: #999999;
+  height: 40px;
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#wrapper {
+  width: 100%;
+  z-index: 3;
+  background-color: #ffffff;
+  height: auto;
+}
+
+#content {
+  float: left;
+  height: auto;
+  width: 580px;
+  padding: 5px;
+  margin-right: 6px;
+  font-size: 12px;
+  z-index: 4;
+}
+
+#sidebar {
+  height: auto;
+  background-color: #ffffff;
+  text-align: left;
+  width: 200px;
+  z-index: 5;
+  float: left;
+  overflow: hidden;
+}
+
+#footer {
+  clear: both;
+  height: 20px;
+  width: 100%;
+  z-index: 7;
+  background-color: #0099ff;
+  font-size: 11px;
+  text-align: center;
+  font-weight: bolder;
+}

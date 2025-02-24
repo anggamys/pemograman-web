@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form pendaftaran</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form action="info.php" id="formulir" method="post">
+      <fieldset>
+        <legend>Form pendaftaran</legend>
+        <p>
+          <label for="nama">Nama:</label>
+          <input type="text" name="nama" id="nama" placeholder="Masukkan nama" />
+        </p>
+        <p>
+          <label>Gender:</label>
+          <input type="radio" name="gender" value="male" id="male" />Male <input type="radio" name="gender" value="female" id="female" />Female
+        </p>
+        <p>
+          <label for="email">Email:</label>
+          <input type="email" name="email" id="email" placeholder="Masukkan email" />
+        </p>
+        <p>
+          <label for="alamat">Alamat:</label>
+          <textarea name="alamat" id="alamat"></textarea>
+        </p>
+        <p>
+          <label for="tanggal-lahir">Tanggal lahir:</label>
+          <input type="date" name="tanggal-lahir" id="tanggal-lahir" />
+        </p>
+        <p>
+          <input type="submit" name="kirim" value="Kirim" />
+        </p>
+      </fieldset>
+    </form>
+  </body>
+</html>
