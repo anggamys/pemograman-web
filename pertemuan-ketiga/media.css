@@ -1,21 +1,23 @@
 @charset "utf-8";
 /* CSS Document */
+
+/* Untuk perangkat dengan lebar minimal 480px (tablet atau desktop) */
 @media screen and (min-width: 480px) {
   body {
-    background-color: #00f;
+    background-color: #00f; /* Latar belakang biru */
   }
   h1 {
-    font-size: 2px;
-  }
-  h1 {
-    border-style: dashed;
+    font-size: 30px; /* Ukuran font yang lebih besar */
+    border-style: dashed; /* Border putus-putus */
   }
 }
+
+/* Untuk perangkat dengan lebar minimal 300px (ponsel kecil hingga tablet) */
 @media screen and (min-width: 300px) {
   h1 {
-    border-style: solid;
+    border-style: solid; /* Border solid */
   }
   body {
-    background-color: #ccc;
+    background-color: #ccc; /* Latar belakang abu-abu muda */
   }
 }

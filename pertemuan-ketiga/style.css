@@ -2,6 +2,7 @@ label {
   float: left;
   width: 120px;
 }
+
 p {
   clear: both;
 }
@@ -12,17 +13,29 @@ input[type='email'],
 textarea,
 select {
   background: none repeat scroll 0 0 #fafafa;
-  color: #fff;
+  color: #333; /* Perbaikan warna teks agar lebih jelas */
   text-shadow: 0 0 1px #000000;
-}
-
-input,
-textarea,
-select {
   border: 1px solid rgb(0, 0, 0.2);
   border-radius: 5px 5px 5px 5px;
   padding: 5px;
   transition: all 0.25s ease-in-out 0s;
   z-index: 10;
-  color: #fff;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #6699cc; /* Efek fokus dengan border biru */
+  background-color: #e6f0ff; /* Latar belakang lebih terang saat difokuskan */
+}
+
+@media (max-width: 768px) {
+  label {
+    width: 100%;
+  }
+  input,
+  textarea,
+  select {
+    width: 100%;
+  }
 }

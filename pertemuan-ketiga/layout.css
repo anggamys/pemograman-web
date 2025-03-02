@@ -1,14 +1,13 @@
+/* Layout Utama */
 #badan_utama {
-  height: auto;
-  width: 800px;
-  vertical-align: middle;
+  width: 100%;
+  max-width: 800px; /* Responsif */
+  margin: 0 auto; /* Menjaga layout tetap di tengah */
   box-shadow: 0px 0px 5px #000;
-  margin-bottom: 0;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0;
+  padding: 10px;
 }
 
+/* Header */
 #header {
   background-color: #ff9900;
   text-align: left;
@@ -16,8 +15,10 @@
   height: 100px;
   z-index: 3;
   overflow: hidden;
+  position: relative; /* Agar z-index berfungsi */
 }
 
+/* Menu */
 #menu {
   background-color: #999999;
   height: 40px;
@@ -26,33 +27,33 @@
   margin-bottom: 5px;
 }
 
+/* Wrapper - Menggunakan Flexbox untuk Content dan Sidebar */
 #wrapper {
+  display: flex; /* Menggunakan flexbox */
+  justify-content: space-between; /* Membuat jarak antara content dan sidebar */
   width: 100%;
-  z-index: 3;
   background-color: #ffffff;
   height: auto;
 }
 
+/* Content */
 #content {
-  float: left;
-  height: auto;
-  width: 580px;
+  flex: 3; /* Menggunakan flex untuk memberikan ruang lebih banyak ke content */
   padding: 5px;
-  margin-right: 6px;
   font-size: 12px;
   z-index: 4;
 }
 
+/* Sidebar */
 #sidebar {
-  height: auto;
+  width: 200px;
   background-color: #ffffff;
   text-align: left;
-  width: 200px;
   z-index: 5;
-  float: left;
-  overflow: hidden;
+  padding: 10px;
 }
 
+/* Footer */
 #footer {
   clear: both;
   height: 20px;
@@ -62,4 +63,5 @@
   font-size: 11px;
   text-align: center;
   font-weight: bolder;
+  position: relative; /* Agar z-index berfungsi */
 }

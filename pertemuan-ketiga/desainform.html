@@ -3,33 +3,46 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Form pendaftaran</title>
+    <title>Form Pendaftaran</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <form action="info.php" id="formulir" method="post">
       <fieldset>
-        <legend>Form pendaftaran</legend>
+        <legend>Form Pendaftaran</legend>
+
+        <!-- Nama -->
         <p>
           <label for="nama">Nama:</label>
-          <input type="text" name="nama" id="nama" placeholder="Masukkan nama" />
+          <input type="text" name="nama" id="nama" placeholder="Masukkan nama" required />
         </p>
+
+        <!-- Gender -->
         <p>
           <label>Gender:</label>
-          <input type="radio" name="gender" value="male" id="male" />Male <input type="radio" name="gender" value="female" id="female" />Female
+          <label for="male"> <input type="radio" name="gender" value="male" id="male" required /> Male </label>
+          <label for="female"> <input type="radio" name="gender" value="female" id="female" required /> Female </label>
         </p>
+
+        <!-- Email -->
         <p>
           <label for="email">Email:</label>
-          <input type="email" name="email" id="email" placeholder="Masukkan email" />
+          <input type="email" name="email" id="email" placeholder="Masukkan email" required />
         </p>
+
+        <!-- Alamat -->
         <p>
           <label for="alamat">Alamat:</label>
-          <textarea name="alamat" id="alamat"></textarea>
+          <textarea name="alamat" id="alamat" placeholder="Masukkan alamat" required></textarea>
         </p>
+
+        <!-- Tanggal Lahir -->
         <p>
-          <label for="tanggal-lahir">Tanggal lahir:</label>
-          <input type="date" name="tanggal-lahir" id="tanggal-lahir" />
+          <label for="tanggal-lahir">Tanggal Lahir:</label>
+          <input type="date" name="tanggal-lahir" id="tanggal-lahir" required />
         </p>
+
+        <!-- Submit Button -->
         <p>
           <input type="submit" name="kirim" value="Kirim" />
         </p>

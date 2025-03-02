@@ -1,22 +1,23 @@
 .header {
-  background: #6699cc;
+  background: #6699cc; /* Warna latar belakang yang bagus */
   padding: 20px;
 }
 
 .header a.judul {
-  font-size: 200%;
+  font-size: 2rem; /* Menggunakan rem untuk ukuran yang lebih konsisten */
   color: #fff;
+  text-decoration: none; /* Tambahkan untuk menghindari garis bawah */
 }
 
 .content {
   background: #ddd;
-  min-height: 400px;
+  min-height: 400px; /* Sesuaikan dengan konten yang diperlukan */
   padding: 10px;
 }
 
 .footer {
   background: #333;
-  padding: 10px;
+  padding: 20px; /* Memberikan ruang yang lebih banyak di footer */
   color: #ccc;
-  margin-bottom: 0px;
+  margin-bottom: 20px; /* Menambahkan margin bawah untuk ruang lebih */
 }
