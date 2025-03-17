@@ -7,21 +7,19 @@
   </head>
   <body>
     <script lang="javascript">
-      var t = new Date()
-      var jam = t.getHours()
-      var menit = t.getMinutes()
-      var detik = t.getSeconds()
+      const t = new Date();
+      const jam = t.getHours();
+      const menit = t.getMinutes();
+      const detik = t.getSeconds();
 
-      document.write("<b> <center> Sekarang ini jam menunjukkan pukul: <h3>" + jam + ":" + menit + ":" + detik + "</h3></center></b>")
+      document.write("<b> <center> Sekarang ini jam menunjukkan pukul: <h3>" + jam + ":" + menit + ":" + detik + "</h3></center></b>");
 
-      if(jam == 1 || jam < 12){
-        alert("Selamat pagi!")
-      }
-      else if(jam == 12 || jam < 18){
-        alert("Selamat siang!")
-      }
-      else if(jam == 18 || jam < 20){
-        alert("Selamat malam!")
+      if (jam >= 0 && jam < 12) {
+        alert("Selamat pagi!");
+      } else if (jam >= 12 && jam < 18) {
+        alert("Selamat siang!");
+      } else if (jam >= 18 && jam < 20) {
+        alert("Selamat malam!");
       }
     </script>
   </body>

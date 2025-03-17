@@ -19,7 +19,6 @@
     </form>
 
     <script>
-      // Function to check all checkboxes
       function checkAll() {
         const checkboxes = document.querySelectorAll('input[name="buah"]');
         checkboxes.forEach((checkbox) => {
@@ -27,7 +26,6 @@
         });
       }
 
-      // Function to uncheck all checkboxes
       function uncheckAll() {
         const checkboxes = document.querySelectorAll('input[name="buah"]');
         checkboxes.forEach((checkbox) => {
@@ -35,7 +33,6 @@
         });
       }
 
-      // Add event listeners to the buttons
       document.getElementById('checkAllBtn').addEventListener('click', checkAll);
       document.getElementById('uncheckAllBtn').addEventListener('click', uncheckAll);
     </script>

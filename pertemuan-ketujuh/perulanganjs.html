@@ -7,17 +7,17 @@
   </head>
   <body>
     <script lang="javascript">
-      var i = 0
-      var jumlah = 0
+      let i = 0;           // `i` must be let because it's incremented
+      let jumlah = 0;      // `jumlah` must be let because it's updated during the loop
 
-      while(i++ < 10){
-        if (i % 2 == 0){
-            jumlah += i
-            document.write(i, " ")
+      while(i++ < 10) {
+        if (i % 2 == 0) {
+            jumlah += i;
+            document.write(i, " ");
         }
       }
 
-      document.write("<br> <b> Jumlah = </b>", jumlah)
+      document.write("<br> <b> Jumlah = </b>", jumlah);
     </script>
   </body>
 </html>

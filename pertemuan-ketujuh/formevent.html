@@ -7,25 +7,22 @@
 
     <script lang="javascript">
       function calc1(form) {
-        // Ensure the inputs are numbers before calculating
-        var a = parseFloat(form.a.value);
-        var b = parseFloat(form.b.value);
+        const a = form.a.value / 100;
+        const b = a * form.b.value;
 
-        // Check if both a and b are numbers before performing the calculation
-        if (!isNaN(a) && !isNaN(b)) {
-          var result = (a / 100) * b;
-          form.total1.value = result;  // Output the result
-        } else {
-          form.total1.value = '';  // Clear the result if inputs are invalid
-        }
+        form.total1.value = b;
       }
     </script>
   </head>
   <body>
     <form action="" oninput="calc1(this)">
-      Persentase: <input type="text" name="a" size="5" /><br />
-      Angka di presentase: <input type="text" name="b" size="5" /><br />
+      <label for="a">Persentase:</label>
+      <input type="text" name="a" size="5" id="a" /><br />
 
+      <label for="b">Angka di presentase:</label>
+      <input type="text" name="b" size="5" id="b" /><br />
+
+      <label for="total1">Hasil:</label>
       <input type="text" name="total1" size="5" maxlength="40" readonly /><br />
     </form>
   </body>
