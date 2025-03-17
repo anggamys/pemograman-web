@@ -7,8 +7,17 @@
   </head>
   <body>
     <script lang="javascript">
+      function tampilkanSemuaValue(array) {
+        let hasil = "";
+        for (let i = 0; i < array.length; i++) {
+          hasil += array[i] + " ";
+        }
+        return hasil;
+      }
+
       const hari = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
       const bulan = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
+
 
       const t = new Date();
       const hari_ini = hari[t.getDay()];
@@ -17,6 +26,9 @@
       const tahun = t.getFullYear();
 
       document.write("<b> <center> Sekarang adalah hari: " + hari_ini + ", " + tanggal + " " + bulan_ini + " " + tahun + "</center></b>");
+
+      document.write("<b>Daftar Hari:</b><br>" + tampilkanSemuaValue(hari) + "<br>");
+      document.write("<b>Daftar Bulan:</b><br>" + tampilkanSemuaValue(bulan));
     </script>
   </body>
 </html>

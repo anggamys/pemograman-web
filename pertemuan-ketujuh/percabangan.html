@@ -14,12 +14,19 @@
 
       document.write("<b> <center> Sekarang ini jam menunjukkan pukul: <h3>" + jam + ":" + menit + ":" + detik + "</h3></center></b>");
 
-      if (jam >= 0 && jam < 12) {
-        alert("Selamat pagi!");
-      } else if (jam >= 12 && jam < 18) {
-        alert("Selamat siang!");
-      } else if (jam >= 18 && jam < 20) {
-        alert("Selamat malam!");
+      switch (true) {
+        case (jam >= 0 && jam < 12):
+          alert("Selamat pagi!");
+          break;
+        case (jam >= 12 && jam < 18):
+          alert("Selamat siang!");
+          break;
+        case (jam >= 18 && jam < 20):
+          alert("Selamat malam!");
+          break;
+        default:
+          alert("Selamat malam!");
+          break;
       }
     </script>
   </body>

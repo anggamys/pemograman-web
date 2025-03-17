@@ -7,17 +7,27 @@
   </head>
   <body>
     <script lang="javascript">
-      let i = 0;           // `i` must be let because it's incremented
-      let jumlah = 0;      // `jumlah` must be let because it's updated during the loop
+      let jumlahGenap = 0;
+      let jumlahGanjil = 0;
 
-      while(i++ < 10) {
-        if (i % 2 == 0) {
-            jumlah += i;
-            document.write(i, " ");
+      document.write("<h3>Angka Genap:</h3>");
+      for (let i = 1; i <= 10; i++) {
+        if (i % 2 === 0) {
+          jumlahGenap += i;
+          document.write(i + " ");
         }
       }
 
-      document.write("<br> <b> Jumlah = </b>", jumlah);
+      document.write("<h3>Angka Ganjil:</h3>");
+      for (let i = 1; i <= 10; i++) {
+        if (i % 2 !== 0) {
+          jumlahGanjil += i;
+          document.write(i + " ");
+        }
+      }
+
+      document.write("<br><b>Jumlah Genap = </b>", jumlahGenap);
+      document.write("<br><b>Jumlah Ganjil = </b>", jumlahGanjil);
     </script>
   </body>
 </html>

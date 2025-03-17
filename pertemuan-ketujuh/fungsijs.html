@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script lang="javascript">
+      function kali(a, b){
+        c = a * b;
+        return c;
+      }
+
+      function bagi(x, y){
+        z = x / y;
+        return z;
+      }
+
+      function hitungGenap(angkaArray) {
+        let count = 0;
+        for (let i = 0; i < angkaArray.length; i++) {
+          if (angkaArray[i] % 2 === 0) {
+            count++;
+          }
+        }
+        return count;
+      }
+
+      const a = 3;
+      const b = 6;
+
+      document.write("Hasil dari ", a, " x ", b, " = ", kali(a, b), "<br>");
+      document.write("Hasil dari ", a, " / ", b, " = ", bagi(a, b), "<br>");
+
+      const angka = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      document.write("<br>Jumlah angka genap dalam array [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] adalah: ", hitungGenap(angka));
+    </script>
+  </body>
+</html>
