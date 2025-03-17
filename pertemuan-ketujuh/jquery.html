@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Odd/Even Checker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Pengecekan bilangan ganjil/genap</h1>
+    <div>
+      Masukkan angka: <input type="text" id="bilangan" class="blue" />
+      <button type="button" class="cek">CEK BILANGAN</button>
+    </div>
+
+    <script type="text/javascript" src="./jquery-3.7.1.min.js"></script>
+    <script type="text/javascript">
+      $(function () {
+        $('.cek').click(function () {
+          const bilangan = $('#bilangan').val();
+
+          if (bilangan % 2 == 0) {
+            alert('Bilangan ' + bilangan + ' adalah genap');
+          } else {
+            alert('Bilangan ' + bilangan + ' adalah ganjil');
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

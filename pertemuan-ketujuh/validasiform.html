@@ -3,29 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Odd/Even Checker</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
   </head>
   <body>
-    <h1>Pengecekan bilangan ganjil/genap</h1>
-    <div>
-      Masukkan angka: <input type="text" id="bilangan" class="blue" />
-      <button type="button" class="cek">CEK BILANGAN</button>
-    </div>
+    <form action="" name="validasi" onsubmit="return validasiForm()">
+      <label for="nama">Nama:</label>
+      <input type="text" name="nama" id="nama" /><br />
 
-    <script type="text/javascript" src="./jquery-3.7.1.min.js"></script>
-    <script type="text/javascript">
-      $(function () {
-        $('.cek').click(function () {
-          const bilangan = $('#bilangan').val();
+      <label for="email">Email:</label>
+      <input type="email" name="email" id="email" /><br />
 
-          if (bilangan % 2 == 0) {
-            alert('Bilangan ' + bilangan + ' adalah genap');
-          } else {
-            alert('Bilangan ' + bilangan + ' adalah ganjil');
-          }
-        });
-      });
+      <label for="alamat">Alamat:</label>
+      <textarea name="alamat" id="alamat"></textarea><br />
+
+      <input type="submit" value="Submit" />
+    </form>
+
+    <script lang="javascript">
+      function validasiForm() {
+        let missingFields = [];
+        if (document.forms["validasi"]["nama"].value == "") {
+          missingFields.push("Nama");
+        }
+        if (document.forms["validasi"]["email"].value == "") {
+          missingFields.push("Email");
+        }
+        if (document.forms["validasi"]["alamat"].value == "") {
+          missingFields.push("Alamat");
+        }
+
+        if (missingFields.length > 0) {
+          alert("Kolom yang kosong: " + missingFields.join(", "));
+          return false;
+        }
+        return true;
+      }
     </script>
   </body>
 </html>
