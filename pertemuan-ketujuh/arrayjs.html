@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script lang="javascript">
+      var hari = new Array("Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu")
+      var bulan = new Array("Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember")
+
+      var t = new Date()
+      var hari_ini = hari[t.getDay()]
+      var tanggal = t.getDate()
+      var bulan_ini = bulan[t.getMonth()]
+      var tahun = t.getFullYear()
+
+      document.write("<b> <center> Sekarang adalah hari: " + hari_ini + ", " + tanggal + " " + bulan_ini + " " + tahun + "</center></b>")
+    </script>
+  </body>
+</html>

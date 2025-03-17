@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkbox Example</title>
+  </head>
+  <body>
+    <form name="form1">
+      <input type="button" name="checkAll" value="Check All" id="checkAllBtn" />
+      <input type="button" name="uncheckAll" value="Uncheck All" id="uncheckAllBtn" />
+      <br />
+
+      <input type="checkbox" name="buah" class="buah" />Manggis <br />
+      <input type="checkbox" name="buah" class="buah" />Apel <br />
+      <input type="checkbox" name="buah" class="buah" />Jeruk <br />
+      <input type="checkbox" name="buah" class="buah" />Pear <br />
+      <input type="checkbox" name="buah" class="buah" />Anggur
+    </form>
+
+    <script>
+      // Function to check all checkboxes
+      function checkAll() {
+        const checkboxes = document.querySelectorAll('input[name="buah"]');
+        checkboxes.forEach((checkbox) => {
+          checkbox.checked = true;
+        });
+      }
+
+      // Function to uncheck all checkboxes
+      function uncheckAll() {
+        const checkboxes = document.querySelectorAll('input[name="buah"]');
+        checkboxes.forEach((checkbox) => {
+          checkbox.checked = false;
+        });
+      }
+
+      // Add event listeners to the buttons
+      document.getElementById('checkAllBtn').addEventListener('click', checkAll);
+      document.getElementById('uncheckAllBtn').addEventListener('click', uncheckAll);
+    </script>
+  </body>
+</html>
