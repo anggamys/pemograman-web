@@ -1,16 +1,20 @@
 <?php
 session_start();
 
-// Credential sederhana untuk contoh
+// Credential sederhana untuk contoh (di produksi, ambil dari database)
 $valid_username = "admin";
-$valid_password = "admin123";
+$valid_password_hash = password_hash("admin123", PASSWORD_DEFAULT);
 
+// Cek apakah form disubmit
 if (isset($_POST["username"]) && isset($_POST["password"])) {
-    $username = $_POST["username"];
-    $password = $_POST["password"];
+    $username = trim($_POST["username"]);
+    $password = trim($_POST["password"]);
 
     // Verifikasi username dan password
-    if ($username === $valid_username && $password === $valid_password) {
+    if (
+        $username === $valid_username &&
+        password_verify($password, $valid_password_hash)
+    ) {
         // Set session jika login sukses
         $_SESSION["logged_in"] = true;
         $_SESSION["username"] = $username;

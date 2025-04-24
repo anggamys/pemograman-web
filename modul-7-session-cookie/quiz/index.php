@@ -67,10 +67,12 @@ if (isset($_SESSION["logged_in"]) && $_SESSION["logged_in"] === true) {
         <h2>Login Syadmin</h2>
 
         <?php if (isset($_GET["error"]) && $_GET["error"] == 1): ?>
-            <p class="error">Username atau password salah!</p>
+            <p class="error"><?php echo htmlspecialchars(
+                "Username atau password salah!"
+            ); ?></p>
         <?php endif; ?>
 
-        <form action="process_login.php" method="post">
+        <form action="login.php" method="post">
             <div>
                 <label for="username">Username:</label>
                 <input type="text" id="username" name="username" required>
