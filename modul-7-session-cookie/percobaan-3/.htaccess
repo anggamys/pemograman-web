@@ -1,9 +1,9 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
-
-    RewriteRule ^Halaman-utama.html$ index.php?page=home [L]
-    RewriteRule ^Halaman-profil.html$ index.php?page=profil [L]
-    RewriteRule ^Halaman-galeri.html$ index.php?page=galeri [L]
-
-    RewriteRule ^([a-zA-Z]+)/$ salah.php?id=$1 [L]
+    # URL cantik ke parameter
+    RewriteRule ^Halaman-utama\.html$ index.php?page=home [L]
+    RewriteRule ^Halaman-profil\.html$ index.php?page=profil [L]
+    RewriteRule ^Halaman-galeri\.html$ index.php?page=galeri [L]
+    # URL seperti: http://localhost/gallery/ -> salah.php?id=gallery
+    RewriteRule ^([a-zA-Z0-9-]+)/$ salah.php?id=$1 [L]
 </IfModule>

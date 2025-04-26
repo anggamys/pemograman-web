@@ -38,14 +38,18 @@
 </head>
 <body>
     <div class="menu">
-        <a href="/">Home</a>
-        <a href="/profil.php">Profil</a>
-        <a href="/gallery.php">Galeri</a>
+        <a href="Halaman-utama.html">Home</a>
+        <a href="Halaman-profil.html">Profil</a>
+        <a href="Halaman-galeri.html">Gallery</a>
     </div>
-
     <div class="content">
-        <div class="header">Home</div>
-        <?php include "modul.php"; ?>
+        <div class="header">
+            <?php
+            $halaman = $_GET["page"] ?? "home";
+            echo ucfirst($halaman);
+            ?>
+        </div>
+        <?php include "./modul.php"; ?>
     </div>
 </body>
 </html>
