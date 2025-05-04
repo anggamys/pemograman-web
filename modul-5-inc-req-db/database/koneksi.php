@@ -5,9 +5,11 @@ $username = "root";
 $password = "C0del@b08";
 $database = "db_23081010008_angga";
 
-$connection = new mysqli($host, $username, $password, $database);
+$mysqli = new mysqli($host, $username, $password, $database);
 
-if ($connection->connect_error) {
-    die("Connection failed: " . $connection->connect_error);
+if ($mysqli->connect_error) {
+    echo "Connection failed: " . $mysqli->connect_error;
+    exit();
+} else {
+    echo "Connection successful!";
 }
-?>

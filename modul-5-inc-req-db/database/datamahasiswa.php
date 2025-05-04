@@ -8,10 +8,9 @@
     </tr>
 
 <?php
-include "koneksi.php";
+include "./koneksi.php";
 
-$query = "SELECT * FROM table_mahasiswa";
-$result = $connection->query($query); // pastikan ini pakai $connection
+$result = getAllMahasiswa($connection);
 
 if ($result && $result->num_rows > 0) {
     while ($data = $result->fetch_assoc()) { ?>
