@@ -4,7 +4,6 @@ $nilai_bhs = 90;
 $nilai_ipa = 80.5;
 $bentuk_boolean = true;
 
-
 echo "Hallo, nama saya adalah $nama <br>";
 echo "Nilai Bahasa Inggris saya adalah $nilai_bhs <br>";
 echo "Nilai IPA saya adalah $nilai_ipa <br>";

@@ -1,3 +1,10 @@
+<?php
+include_once "./koneksi.php";
+include_once "./aksi.php";
+
+$dataMahasiswa = getAllMahasiswa($koneksi);
+?>
+
 <table border="1">
     <tr>
         <th>Nama</th>
@@ -7,30 +14,27 @@
         <th>Aksi</th>
     </tr>
 
-<?php
-include "./koneksi.php";
+    <?php if (!empty($dataMahasiswa)): ?>
+        <?php foreach ($dataMahasiswa as $mahasiswa): ?>
+            <tr>
+                <td><?= htmlspecialchars($mahasiswa['Nama']) ?></td>
+                <td><?= htmlspecialchars($mahasiswa['Email']) ?></td>
+                <td><?= htmlspecialchars($mahasiswa['web']) ?></td>
+                <td><?= nl2br(htmlspecialchars($mahasiswa['alamat'])) ?></td>
+                <td>
+                    <?php if (!empty($mahasiswa['Kode'])): ?>
+                        <a href="form.php?id=<?= urlencode($mahasiswa['Kode']) ?>">Edit</a> |
+                        <a href="delete.php?id=<?= urlencode($mahasiswa['Kode']) ?>" onclick="return confirm('Yakin ingin menghapus data ini?');">Delete</a>
+                    <?php else: ?>
+                        <em>ID tidak tersedia</em>
+                    <?php endif; ?>
+                </td>
 
-$result = getAllMahasiswa($connection);
-
-if ($result && $result->num_rows > 0) {
-    while ($data = $result->fetch_assoc()) { ?>
-    <tr>
-        <td><?php echo $data["Nama"]; ?></td>
-        <td><?php echo $data["Email"]; ?></td>
-        <td><?php echo $data["web"]; ?></td>
-        <td>
-            <!-- <?php echo $data["isi"]; ?> -->
-        </td>
-        <td>
-            <a href="form.php?id=<?php echo $data["Kode"]; ?>">Edit</a> |
-            <a href="aksi.php?id=<?php echo $data[
-                "Kode"
-            ]; ?>&proses=hapus">Hapus</a>
-        </td>
-    </tr>
-<?php }
-} else {
-    echo "<tr><td colspan='5'>Data belum ada</td></tr>";
-}
-?>
+            </tr>
+        <?php endforeach; ?>
+    <?php else: ?>
+        <tr>
+            <td colspan="5">Data belum tersedia.</td>
+        </tr>
+    <?php endif; ?>
 </table>

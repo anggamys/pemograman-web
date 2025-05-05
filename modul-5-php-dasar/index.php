@@ -28,7 +28,7 @@
             // include './perulanganforeach.php';
             // include './whiledowhile.php';
             // include './prosedur.php';
-            // include './fungsi.php';
+            include './fungsi.php';
             // include './fungsimatematik.php';
             // include './fungsiparams.php';
             // include './form/formget.php';

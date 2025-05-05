@@ -1,6 +1,6 @@
 <?php
 
-$nama = "Masukkan nama anda";
+$nama = "Angga";
 echo "Nama saya adalah $nama";
 
 function salam()
