@@ -1,9 +1,11 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
-    # URL cantik ke parameter
+
+    # Halaman statis diarahkan ke index.php dengan query
     RewriteRule ^Halaman-utama\.html$ index.php?page=home [L]
     RewriteRule ^Halaman-profil\.html$ index.php?page=profil [L]
     RewriteRule ^Halaman-galeri\.html$ index.php?page=galeri [L]
-    # URL seperti: http://localhost/gallery/ -> salah.php?id=gallery
+
+    # Fallback: URL seperti /gallery/ akan diarahkan ke salah.php
     RewriteRule ^([a-zA-Z0-9-]+)/$ salah.php?id=$1 [L]
 </IfModule>

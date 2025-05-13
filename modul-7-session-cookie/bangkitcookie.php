@@ -1,7 +1,19 @@
 <?php
-
+// PANGGIL setcookie() SEBELUM echo APAPUN!
 setcookie("nama", "Moh Angga");
-echo "Cookie telah disetel!";
-
 setcookie("nama_teman", "John Doe", time() + 3600);
-echo "Cookie nama_teman telah disetel!";
+?>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Set Cookie</title>
+</head>
+
+<body>
+    <p>Cookie telah disetel!</p>
+    <p>Cookie nama_teman telah disetel!</p>
+</body>
+
+</html>
