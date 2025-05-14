@@ -45,12 +45,19 @@
 
 <body>
     <div class="menu">
-        <a href="Halaman-utama.html">Home</a>
-        <a href="Halaman-profil.html">Profil</a>
-        <a href="Halaman-galeri.html">Gallery</a>
+        <a href="index.php?page=home">Home</a>
+        <a href="index.php?page=profil">Profil</a>
+        <a href="index.php?page=galeri">Gallery</a>
     </div>
 
     <div class="content">
+        <div class="header">
+            <?php
+            $halaman = isset($_GET['page']) ? $_GET['page'] : 'home';
+            echo "<h1>" . ucfirst($halaman) . "</h1>";
+            ?>
+        </div>
+
         <?php include "./modul.php"; ?>
     </div>
 </body>

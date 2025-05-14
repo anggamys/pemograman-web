@@ -1,17 +1,12 @@
 <?php
 $halaman = $_GET["page"] ?? "home";
 
-switch ($halaman) {
-    case "home":
-        include "depan.php";
-        break;
-    case "profil":
-        include "profil.php";
-        break;
-    case "galeri":
-        include "gallery.php";
-        break;
-    default:
-        echo "<p>Halaman tidak ditemukan.</p>";
-        break;
+if ($halaman == "home") {
+    include "depan.php";
+} elseif ($halaman == "profil") {
+    include "profil.php";
+} elseif ($halaman == "galeri") {
+    include "gallery.php";
+} else {
+    include "salah.php";
 }

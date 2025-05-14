@@ -1,5 +1,4 @@
 <?php
-// PANGGIL setcookie() SEBELUM echo APAPUN!
 setcookie("nama", "Moh Angga");
 setcookie("nama_teman", "John Doe", time() + 3600);
 ?>
